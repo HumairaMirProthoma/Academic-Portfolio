@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Research — Humaira Mir Prothoma</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Centered Read More button */
+    .read-more-btn {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 20px;
+      background-color: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .read-more-btn:hover {
+      opacity: 0.85;
+    }
+
+    /* Hidden content */
+    .more-content {
+      display: none;
+      margin-top: 15px;
+    }
+
+    /* Bottom buttons: Access PDF + Show Less */
+    .bottom-buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center; /* vertical alignment */
+    }
+
+    .bottom-buttons .btn {
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 1rem;
+      line-height: 1.2;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      background-color: var(--accent);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto; /* prevent stretching */
+    }
+
+    .bottom-buttons .btn:hover {
+      opacity: 0.85;
+    }
+
+    /* Make Show Less button identical to .btn */
+    .bottom-buttons .show-less-btn {
+      background-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <div class="brand">Humaira Mir Prothoma</div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+      <ul id="navMenu" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="reveal">
+      <div class="section-title">Research</div>
+
+      <!-- Thesis Section -->
+      <div class="research-box reveal" style="margin-top:18px;">
+        <h3>Thesis Title: &ldquo;Real-Time Obscene Scene Nudity Detection and Blurring in a Video Clip&rdquo;</h3>
+
+        <!-- Abstract -->
+        <p>
+          This research demonstrates a real-time neural network-based system to detect and blur nude and obscene content in videos,
+          enhancing online safety for children and sensitive viewers. Using YOLOv6 and OpenCV, the system achieves a balance of 
+          accuracy and speed suitable for live video streams.
+        </p>
+
+        <!-- Read More button -->
+        <button class="read-more-btn" onclick="expandContent()">Read More</button>
+
+        <!-- Hidden content -->
+        <div class="more-content">
+          <h4 class="section-subtitle">Problem & Motivation</h4>
+          <p>
+            Nudity and sexual content are widely accessible online, posing risks to children and vulnerable users.
+            Existing detection algorithms struggle with real-time performance and false positives, motivating the development
+            of a fast and accurate content filtering system.
+          </p>
+
+          <h4 class="section-subtitle">Methodology</h4>
+          <ul>
+            <li>Dataset: 3,500 labeled images split into training (2,450), validation (700), and test (350) sets</li>
+            <li>Algorithms: YOLOv5, YOLOv6, Faster R-CNN (Detectron2)</li>
+            <li>Blurring: OpenCV average blur identified as fastest and most effective method</li>
+            <li>Evaluation: mAP@0.5, precision-recall curves, and blur speed benchmarking</li>
+          </ul>
+
+          <h4 class="section-subtitle">Results & Insights</h4>
+          <p>
+            YOLOv6 achieved faster detection than YOLOv5 with comparable accuracy. OpenCV average blur provided real-time concealment with minimal latency. This combination ensures safe video content delivery without affecting normal viewing experience.
+          </p>
+
+          <h4 class="section-subtitle">Impact & Contribution</h4>
+          <p>
+            This research contributes to real-time obscene content filtering, demonstrating advanced skills in neural networks, 
+            computer vision, and image processing. It also highlights expertise in dataset creation, performance evaluation, 
+            and practical deployment of deep learning models.
+          </p>
+
+          <h4 class="section-subtitle">My Contribution</h4>
+          <p>
+            While this thesis was a collaborative effort, my primary contributions included designing and implementing the real-time detection pipeline, fine-tuning the YOLOv6 model for optimal performance, and evaluating multiple blurring techniques to identify the fastest and most reliable method for concealing obscene content. I was responsible for dataset preparation, labeling, and preprocessing to ensure high-quality training data. Additionally, I documented all experimental results, analyzed model performance metrics, and proposed improvements to reduce false positives, thereby enhancing the practical applicability of the system. Through this work, I gained hands-on experience in neural networks, computer vision, and real-time video processing, which strengthened both my technical and research skills.
+          </p>
+
+          <h4 class="section-subtitle">Future Work</h4>
+          <p>
+            Future work includes expanding the dataset, improving detection of small-scale obscene regions, 
+            and integrating the system into live streaming platforms for broader deployment.
+          </p>
+
+          <!-- Bottom Buttons: Access PDF + Show Less -->
+          <div class="bottom-buttons">
+            <a href="thesis/Real-Time Obscene Scene Nudity Detection and Blurring in a Video Clip.pdf" target="_blank" rel="noopener" class="btn">
+              Access Full Thesis (PDF)
+            </a>
+            <button class="btn show-less-btn" onclick="collapseContent()">Show Less</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Interests -->
+      <div style="margin-top:30px;">
+        <h4 class="section-subtitle" style="margin-bottom:8px;">Research Interests</h4>
+        <ul class="research-list">
+
+           <li><b>Human-Computer Interaction (HCI):</b> Designing intuitive, user-centered interfaces and exploring how humans interact with technology in real-world contexts.</li>
+           <li><b>Accessibility:</b> Developing inclusive solutions that ensure technology is usable by people with diverse abilities and needs.</li>
+           <li><b>Health Informatics:</b> Applying data-driven approaches to improve healthcare delivery, patient safety, and decision-making systems.</li>
+           <li><b>Information Retrieval (IR):</b> Building efficient systems for organizing, searching, and retrieving information from large-scale datasets.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year-js-2">2025</span> Humaira Mir Prothoma — research</footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    function expandContent() {
+      const readMoreBtn = document.querySelector('.read-more-btn');
+      const hiddenContent = document.querySelector('.more-content');
+
+      readMoreBtn.style.display = "none";
+      hiddenContent.style.display = "block";
+      hiddenContent.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function collapseContent() {
+      const readMoreBtn = document.querySelector('.read-more-btn');
+      const hiddenContent = document.querySelector('.more-content');
+
+      hiddenContent.style.display = "none";
+      readMoreBtn.style.display = "block";
+      readMoreBtn.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
